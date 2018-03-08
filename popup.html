@@ -1,0 +1,53 @@
+<html>
+  <head>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>TabGroups</h1>
+      <div class="container">
+        <div id="currentWorkplaces" class = "container">
+            <h4>Your workplaces</h4>
+            <hr>
+        </div>
+
+        <p>Create a workplace!</p>
+
+<!-- 
+        <div class="container">
+          try...<div class="row">
+              <div class="col-xs-6">
+                <div>
+                  <input id="newItem" type = "text" name="newItem"> <button id="addButton">+</button>
+                </div>
+              </div>
+              <div class="col-xs-6">
+              </div>
+            </div>
+          <ul id="workplaces">
+
+          </ul>
+        </div> -->
+        <form id="create">
+            <input id="name" type="text" placeholder="Enter new workplace name">
+            <div id= "inputs">
+                <input  class="inputelement" type="url"  required placeholder="http://....">
+                <input class="inputelement" type="url" required placeholder="http://....">
+            </div>
+           
+            <input type="submit"   id = "submit" value="Submit">
+        </form>
+        <button id="createInput">Add another site</button>
+
+      </div>
+    </div>
+  </body>
+    <script src="src/jquery.js"></script>
+    <script src="src/require.js"></script>
+    <script src="src/index.js"></script>
+
+  </html>
+
+
+  

@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+
+    },
+    "files": [
+        "index.ts",
+        "app.ts"
+    ]
+}
