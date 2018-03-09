@@ -17,14 +17,6 @@ body{
     margin-right: 4%;
 }
 
-.delete{
-    text-overflow: clip;
-    color:transparent;                 /* sends the text off-screen */
-    height: 10px;                        /* be sure to set height & width */
-    max-width: 6px;
-    background-color: red;
-}
-
 
 button.openTabset {
     display: inline-block;
@@ -61,7 +53,7 @@ h6 {
 
 h2{
     font-weight: 300;
-    color:rgb(9, 43, 138)
+    color:#28a745;
 }
 
 .link {
@@ -77,3 +69,20 @@ h2{
 }
 
 
+/* .delete{
+    text-overflow: clip;
+    color:transparent;                 
+    height: 10px;                        
+    max-width: 6px;
+    background-color: red;
+} */
+
+i.delete {
+    color: #28a745;
+    margin-right: 5%;
+    margin-left: -1%;
+}
+
+i.delete:hover{
+
+}
