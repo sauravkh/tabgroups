@@ -17,6 +17,15 @@ body{
     margin-right: 4%;
 }
 
+.delete{
+    text-overflow: clip;
+    color:transparent;                 /* sends the text off-screen */
+    height: 10px;                        /* be sure to set height & width */
+    max-width: 6px;
+    background-color: red;
+}
+
+
 button.openTabset {
     display: inline-block;
     margin: 2%;
@@ -66,4 +75,5 @@ h2{
 .link:hover{
     text-decoration: underline;
 }
+
 
