@@ -18,7 +18,7 @@ var View = /** @class */ (function () {
     View.prototype.addButton = function (groupName) {
     };
     View.prototype.showButton = function (key) {
-        $('#currentWorkplaces').append("<span id=\"" + key + "\"><button class=\"openTabset btn btn-outline-success \">" + key + "</button> <i id = \"delete\" class=\"delete\">" + key + "</i></span>");
+        $('#currentWorkplaces').append("<span id=\"" + key + "\"><button class=\"openTabset btn btn-outline-success \">" + key + "</button> <button id=\"" + key + "\" class=\"delete\">x</button></span>");
     };
     View.prototype.deleteButton = function (name) {
         $('#' + name).remove();
@@ -58,8 +58,8 @@ var Store = /** @class */ (function () {
         for (var i = 0; i < buttons.length; i++) {
             buttons[i].addEventListener('click', function o() {
                 console.log('in fewds');
-                console.log(this.textContent);
-                self.removeFromStore(this.textContent); // sends name of workplace to remove
+                console.log(this.id);
+                self.removeFromStore(this.id); // sends name of workplace to remove
             }, true);
         }
     };
