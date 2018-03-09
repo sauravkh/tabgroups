@@ -6,33 +6,35 @@
   <body>
     <!-- BOX -->
     <div class="container">
-      <h1>TabGroups</h1>
-
+      <h2>TabGroups</h2>
+      <p></p>
+      <hr>
       <!-- WORKSTATION FOLDERS-->
       <div class="container-box">
-        <div id="currentWorkplaces" class = "container">
-            <h4>Your workplaces</h4>
-            <hr>
-            <div class="create-new-tab"><a class="create-new-button" href="newtab.html">New Tab</a></div>
+        <div id="currentWorkplaces" class = "container-box-inside">
+            <h6>Your Workplaces</h6>
         </div>
+        <hr>
       </div>
 
-      <!-- CREATE NEW
-      <div class="create-new">
-        <p>Create a workplace!</p>
-        
-        <form id="create" class="form-group">
-            <input id="name" type="text" placeholder="Enter new workplace name">
-            <div id= "inputs" class="form-group">
-                <input  class="inputelement" type="url"  required placeholder="http://....">
-                <input class="inputelement" type="url" required placeholder="http://....">
-            </div>
-           
-            <input type="submit"   id = "submit" value="Submit">
-        </form>
-        <button id="createInput">Add another site</button>
-
-      </div> -->
+      <div class="container-box">
+        <div class="container-box-inside">
+          <h6>Create a Workplace</h6>
+          
+          <form id="create" >
+              <input id="name" type="text" class="textbox" placeholder="Workplace Name">
+              <div id= "inputs" class="form-group">
+                  <input  class="inputelement" type="url"  required placeholder="http://....">
+                  <input class="inputelement" type="url" required placeholder="http://....">
+              </div>
+            
+              <input type="submit" id = "submit" value="Save" class="button" onClick="window.location.href='put your page url here'">
+              
+          </form>
+          <button id="createInput" class="link">Add another site</button>
+  
+       </div>
+</div>
     </div>
   </body>
 

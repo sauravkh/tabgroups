@@ -113,7 +113,7 @@ var Store = /** @class */ (function () {
                 console.log(data);
                 for (var key in data) {
                     if (key === groupName) {
-                        $('#currentWorkplaces').append("<br><button class=\"openTabset btn btn-outline-success \">" + key + "</button>");
+                        $('#currentWorkplaces').append("<button class=\"openTabset btn btn-outline-success \">" + key + "</button>");
                     }
                 }
             }
@@ -125,7 +125,7 @@ var Store = /** @class */ (function () {
         chrome.storage.sync.get(null, function (data) {
             console.log(data);
             for (var key in data) {
-                $('#currentWorkplaces').append("<br><button class=\"openTabset btn btn-outline-success \">" + key + "</button>");
+                $('#currentWorkplaces').append("<button class=\"openTabset btn btn-outline-success \">" + key + "</button>");
             }
             self.handleOpenTab();
         });

@@ -138,7 +138,7 @@ class Store {
                 console.log(data)
                 for(let key in data) {
                     if(key === groupName){
-                        $('#currentWorkplaces').append("<br><button class=\"openTabset btn btn-outline-success \">" + key + "</button>");
+                        $('#currentWorkplaces').append("<button class=\"openTabset btn btn-outline-success \">" + key + "</button>");
                     }
                 }
 
@@ -153,7 +153,7 @@ class Store {
         chrome.storage.sync.get(null, function(data){
                 console.log(data);
                 for(let key in data) {
-                    $('#currentWorkplaces').append("<br><button class=\"openTabset btn btn-outline-success \">" + key + "</button>");
+                    $('#currentWorkplaces').append("<button class=\"openTabset btn btn-outline-success \">" + key + "</button>");
                 }
                 self.handleOpenTab();
         })
