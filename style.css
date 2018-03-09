@@ -1,5 +1,5 @@
 body{
-    min-width:500px;
+    min-width:550px;
     height: 100%;
 }
 
@@ -41,6 +41,7 @@ input[type=text], input[type=url] {
 input[type="submit"]{
     border: 1px solid #28a745; 
     height: 35px;
+    font-size: 14px;
     color: #28a745;
     width: 120px;
     border-radius: 4px;
@@ -68,21 +69,16 @@ h2{
     text-decoration: underline;
 }
 
-
-/* .delete{
-    text-overflow: clip;
-    color:transparent;                 
-    height: 10px;                        
-    max-width: 6px;
-    background-color: red;
-} */
-
-i.delete {
-    color: #28a745;
-    margin-right: 5%;
-    margin-left: -1%;
+button.delete{
+    background-color: transparent;
+    border: none;
+    margin-left: -3%;;
 }
 
-i.delete:hover{
+button.delete:hover{
+    color: red;    
+}
 
+p{
+    font-size: 14px;
 }
