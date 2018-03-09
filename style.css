@@ -55,6 +55,14 @@ h2{
 }
 
 .link {
-    
+    border: none;
+    background-color: #fff;
+    color: dodgerblue;
+    font-size: 12px;
+
+}
+
+.link:hover{
+    text-decoration: underline;
 }
 
