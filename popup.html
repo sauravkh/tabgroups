@@ -4,15 +4,23 @@
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
+    <!-- BOX -->
     <div class="container">
       <h1>TabGroups</h1>
-      <div class="container">
+
+      <!-- WORKSTATION FOLDERS-->
+      <div class="container-box">
         <div id="currentWorkplaces" class = "container">
             <h4>Your workplaces</h4>
             <hr>
+            <div class="create-new-tab"><a class="create-new-button" href="newtab.html">New Tab</a></div>
         </div>
+      </div>
 
+      <!-- CREATE NEW
+      <div class="create-new">
         <p>Create a workplace!</p>
+        
         <form id="create" class="form-group">
             <input id="name" type="text" placeholder="Enter new workplace name">
             <div id= "inputs" class="form-group">
@@ -24,9 +32,10 @@
         </form>
         <button id="createInput">Add another site</button>
 
-      </div>
+      </div> -->
     </div>
   </body>
+
     <script src="src/jquery.js"></script>
     <script src="src/require.js"></script>
     <script src="src/index.js"></script>
