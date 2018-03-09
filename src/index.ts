@@ -69,9 +69,12 @@ class Store {
             var urlList = Object.keys(data).map(key=>data[key])[0];
             console.log(Object.keys(data).map(key=>data[key]))
             let objData =  JSON.parse(urlList);
-            objData.urls.forEach((url)=>{
-                chrome.tabs.create({ url: url});
-            })
+            chrome.windows.create({
+                url: objData.urls
+            });
+            // objData.urls.forEach((url)=>{
+            //     chrome.tabs.create({ url: url});
+            // })
         })
 
       
@@ -102,10 +105,6 @@ class Store {
     addData (name:string,urls:string[]) {
         this.urlSets.push(new UrlSet(name,urls));
         let keys:string = name;
-        //let obj:any;
-        //obj = new UrlSet(name,urls);
-
-
         var key = name,
         testPrefs = JSON.stringify({
             'name': name,
@@ -139,7 +138,7 @@ class Store {
                 console.log(data)
                 for(let key in data) {
                     if(key === groupName){
-                        $('#currentWorkplaces').append("<button class=\"openTabset\">" + key + "</button>");
+                        $('#currentWorkplaces').append("<br><button class=\"openTabset btn btn-outline-success \">" + key + "</button>");
                     }
                 }
 
@@ -154,7 +153,7 @@ class Store {
         chrome.storage.sync.get(null, function(data){
                 console.log(data);
                 for(let key in data) {
-                    $('#currentWorkplaces').append("<button class=\"openTabset\">" + key + "</button>");
+                    $('#currentWorkplaces').append("<br><button class=\"openTabset btn btn-outline-success \">" + key + "</button>");
                 }
                 self.handleOpenTab();
         })

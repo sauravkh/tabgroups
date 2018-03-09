@@ -54,9 +54,15 @@ var Store = /** @class */ (function () {
             var urlList = Object.keys(data).map(function (key) { return data[key]; })[0];
             console.log(Object.keys(data).map(function (key) { return data[key]; }));
             var objData = JSON.parse(urlList);
-            objData.urls.forEach(function (url) {
-                chrome.tabs.create({ url: url });
+            console.log("behind");
+            console.log(objData.urls);
+            chrome.windows.create({
+                url: objData.urls
             });
+            console.log("after");
+            // objData.urls.forEach((url)=>{
+            //     chrome.tabs.create({ url: url});
+            // })
         });
     };
     Store.prototype.handleInput = function () {
@@ -80,8 +86,6 @@ var Store = /** @class */ (function () {
     Store.prototype.addData = function (name, urls) {
         this.urlSets.push(new UrlSet(name, urls));
         var keys = name;
-        //let obj:any;
-        //obj = new UrlSet(name,urls);
         var key = name, testPrefs = JSON.stringify({
             'name': name,
             "urls": urls
@@ -109,7 +113,7 @@ var Store = /** @class */ (function () {
                 console.log(data);
                 for (var key in data) {
                     if (key === groupName) {
-                        $('#currentWorkplaces').append("<button class=\"openTabset\">" + key + "</button>");
+                        $('#currentWorkplaces').append("<br><button class=\"openTabset btn btn-outline-success \">" + key + "</button>");
                     }
                 }
             }
@@ -121,7 +125,7 @@ var Store = /** @class */ (function () {
         chrome.storage.sync.get(null, function (data) {
             console.log(data);
             for (var key in data) {
-                $('#currentWorkplaces').append("<button class=\"openTabset\">" + key + "</button>");
+                $('#currentWorkplaces').append("<br><button class=\"openTabset btn btn-outline-success \">" + key + "</button>");
             }
             self.handleOpenTab();
         });

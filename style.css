@@ -12,3 +12,10 @@ h4 {
     border:1px solid grey;
     margin: 5px 0 10px 0;
 }
+
+
+
+body {
+    min-width:500px;
+    min-height: 400px;
+}
